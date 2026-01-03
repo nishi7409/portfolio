@@ -1,0 +1,20 @@
+<div
+  class="fixed top-0 left-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_100%_90%_at_50%_-25%,rgba(34,159,100,0.26),rgba(255,255,255,0))]">
+</div>
+
+<!-- Main content with DaisyUI classes -->
+<main class="relative min-h-screen">
+  <div class="navbar backdrop-blur-sm">
+    <div class="flex-1">
+      <a class="btn btn-ghost text-xl">Portfolio</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><a>Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Projects</a></li>
+      </ul>
+    </div>
+  </div>
+  <router-outlet />
+</main>
