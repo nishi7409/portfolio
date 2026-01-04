@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  portfolio-frontend:
+    image: ghcr.io/nishi7409/portfolio:latest
+    container_name: portfolio-frontend
+    restart: unless-stopped
+    ports:
+      - "32788:80"
+    environment:
+      - TZ=America/New_York
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  default:
+    name: portfolio-network
