@@ -1,0 +1,148 @@
+---
+
+import Layout from "@/src/layouts/Layout.astro";
+import { useI18n } from "@ariaskit/astro-i18n";
+import { type LocaleSchema } from "@/src/types";
+import Hero from "@/src/components/Hero.astro";
+import Projects from "@/src/components/Projects.astro";
+import Experience from "@/src/components/Experience.astro";
+
+const { t, locale } = useI18n<LocaleSchema>({
+  ssg: {
+    astro: Astro,
+  },
+});
+
+const heroProps = {
+  name: "Nishant Srivastava",
+  title: { key: "hero.title", value: t("hero.title") },
+  p1: { key: "hero.p1", value: t("hero.p1") },
+  p2: { key: "hero.p2", value: t("hero.p2") },
+  p3: { key: "hero.p3", value: t("hero.p3") },
+};
+
+const projects = [
+  {
+    nameKey: "projects.item_1.name",
+    descriptionKey: "projects.item_1.description",
+    name: t("projects.item_1.name"),
+    description: t("projects.item_1.description"),
+    link: t("projects.item_1.link"),
+  },
+  {
+    nameKey: "projects.item_2.name",
+    descriptionKey: "projects.item_2.description",
+    name: t("projects.item_2.name"),
+    description: t("projects.item_2.description"),
+    link: t("projects.item_2.link"),
+  },
+  {
+    nameKey: "projects.item_3.name",
+    descriptionKey: "projects.item_3.description",
+    name: t("projects.item_3.name"),
+    description: t("projects.item_3.description"),
+    link: t("projects.item_3.link"),
+  },
+  
+];
+
+const projectsProps = {
+  title: { key: "projects.title", value: t("projects.title") },
+  projects,
+};
+
+const experienceData = {
+  title: {
+    key: "experience.title",
+    value: t("experience.title"),
+  },
+  jobs: [
+    {
+      period: {
+        key: "experience.item_1.period",
+        value: t("experience.item_1.period"),
+      },
+      role: {
+        key: "experience.item_1.role",
+        value: t("experience.item_1.role"),
+      },
+      company: {
+        key: "experience.item_1.company",
+        value: t("experience.item_1.company"),
+      },
+      description: {
+        key: "experience.item_1.description",
+        value: t("experience.item_1.description"),
+      },
+    },
+    {
+      period: {
+        key: "experience.item_2.period",
+        value: t("experience.item_2.period"),
+      },
+      role: {
+        key: "experience.item_2.role",
+        value: t("experience.item_2.role"),
+      },
+      company: {
+        key: "experience.item_2.company",
+        value: t("experience.item_2.company"),
+      },
+      description: {
+        key: "experience.item_2.description",
+        value: t("experience.item_2.description"),
+      },
+    },
+    {
+      period: {
+        key: "experience.item_3.period",
+        value: t("experience.item_3.period"),
+      },
+      role: {
+        key: "experience.item_3.role",
+        value: t("experience.item_3.role"),
+      },
+      company: {
+        key: "experience.item_3.company",
+        value: t("experience.item_3.company"),
+      },
+      description: {
+        key: "experience.item_3.description",
+        value: t("experience.item_3.description"),
+      },
+    },
+    {
+      period: {
+        key: "experience.item_4.period",
+        value: t("experience.item_4.period"),
+      },
+      role: {
+        key: "experience.item_4.role",
+        value: t("experience.item_4.role"),
+      },
+      company: {
+        key: "experience.item_4.company",
+        value: t("experience.item_4.company"),
+      },
+      description: {
+        key: "experience.item_4.description",
+        value: t("experience.item_4.description"),
+      },
+    },
+  ],
+};
+
+
+---
+
+<Layout
+  locale={locale}
+  title="Nishant"
+  description={t("description")}
+>
+  <main>
+    <Hero {...heroProps} />
+    <Projects {...projectsProps} />
+    <Experience {...experienceData} />
+  </main>
+</Layout>

@@ -1,0 +1,69 @@
+{
+  "description": "Software engineer with experience in building scalable systems, optimizing data pipelines, and leading multi-network integrations. Passionate about crafting robust architectures and delivering impactful solutions.",
+  "nav": {
+    "about": "about",
+    "projects": "projects",
+    "experience": "experience",
+    "contact": "contact"
+  },
+  "hero": {
+    "title": "Software Development Engineer",
+    "p1": "crafting robust system architectures, engineering scalable solutions, and optimizing data pipelines",
+    "p2": "My experience spans leading multi-network integrations, automating large-scale data processing, and enhancing cloud deployments to meet stringent security standards.",
+    "p3": "Always looking for challenging opportunities that have direct impact."
+  },
+  "projects": {
+    "title": "Projects",
+    "item_1": {
+      "name": "ilook.hot",
+      "description": "Coming soon",
+      "link": "https://github.com/nishi7409/ilook.hot"
+    },
+    "item_2": {
+      "name": "policebody.cam",
+      "description": "Watch police body cam footage from around the world and keep up with the latest news on police accountability.",
+      "link": "https://github.com/nishi7409/policebody.cam"
+    },
+    "item_3": {
+      "name": "wordofthe.day",
+      "description": "New word every day, with definitions, examples, and a fun fact.",
+      "link": "https://github.com/nishi7409/wordofthe.day"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "item_1": {
+      "period": "2026 — PRESENT",
+      "role": "Software Development Engineer 2",
+      "company": "Amazon Web Services",
+      "description": "Amazon Dedicated Cloud - Network Engineering."
+    },
+    "item_2": {
+      "period": "2025 — 2026",
+      "role": "System Development Engineer 2",
+      "company": "Amazon Web Services",
+      "description": "OpenSearch, Redshift, EMR, Glue, Athena, LakeFormation, and <a href='https://github.com/awslabs/LISA/releases/tag/v6.1.0' target='_blank' rel='noopener noreferrer' class='underline hover:text-green-500 transition-all duration-200'>LLM Inference Solution for Amazon Dedicated Cloud (release v6.1.0)</a>."
+    },
+    "item_3": {
+      "period": "2023 — 2025",
+      "role": "Software Engineer",
+      "company": "Department of War",
+      "description": "Please contact me for details."
+    },
+    "item_4": {
+      "period": "2023 — 2023",
+      "role": "Software Engineer",
+      "company": "Department of War",
+      "description": "Please contact me for details."
+    }
+  },
+  "contact": {
+    "status": "Feel free to reach out",
+    "email_label": "Email",
+    "email_url": "mailto:nishant@rsrivastava.io",
+    "github_label": "GitHub",
+    "github_url": "https://github.com/nishi7409",
+    "linkedin_label": "Linkedin",
+    "linkedin_url": "https://linkedin.com/in/nishantrs"
+  }
+}

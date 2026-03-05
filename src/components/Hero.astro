@@ -1,0 +1,44 @@
+---
+import I18NDebug from "@ariaskit/astro-i18n/I18NDebug.astro";
+import Linkedin from "@lucide/astro/icons/linkedin";
+import Mail from "@lucide/astro/icons/mail";
+export type KT = { key: string; value: string };
+
+interface Props {
+    name: string;
+    title: KT;
+    p1: KT;
+    p2: KT;
+    p3: KT;
+}
+
+const { name, title, p1, p2, p3 } = Astro.props as Props;
+---
+
+<section id={name} class="mb-10 mt-50">
+    <div class="mb-4 flex items-center gap-3">
+        <h1 class="font-semibold text-xl">{name}</h1>
+        <a href="https://linkedin.com/in/nishantrs" target="_blank" rel="noopener noreferrer" class="opacity-50 hover:opacity-100 hover:text-green-500 transition-all duration-200" aria-label="LinkedIn">
+            <Linkedin class="h-5 w-5" />
+        </a>
+        <a href="mailto:nishant@rsrivastava.io" class="opacity-50 hover:opacity-100 hover:text-green-500 transition-all duration-200" aria-label="Email">
+            <Mail class="h-5 w-5" />
+        </a>
+    </div>
+    <div class="[&_p]:mb-6 leading-7">
+        <p>
+            <I18NDebug key={title.key}>
+                <span class="text-green-500">{title.value} </span>
+            </I18NDebug>
+            <I18NDebug key={p1.key}>
+                <span class="opacity-50">{p1.value}</span>
+            </I18NDebug>
+        </p>
+        <I18NDebug key={p2.key}>
+            <p class="opacity-50">{p2.value}</p>
+        </I18NDebug>
+        <I18NDebug key={p3.key}>
+            <p class="opacity-50">{p3.value}</p>
+        </I18NDebug>
+    </div>
+</section>
