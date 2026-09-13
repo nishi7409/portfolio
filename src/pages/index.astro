@@ -4,7 +4,6 @@ import Layout from "@/src/layouts/Layout.astro";
 import { useI18n } from "@ariaskit/astro-i18n";
 import { type LocaleSchema } from "@/src/types";
 import Hero from "@/src/components/Hero.astro";
-import Projects from "@/src/components/Projects.astro";
 import Experience from "@/src/components/Experience.astro";
 
 const { t, locale } = useI18n<LocaleSchema>({
@@ -19,36 +18,6 @@ const heroProps = {
   p1: { key: "hero.p1", value: t("hero.p1") },
   p2: { key: "hero.p2", value: t("hero.p2") },
   p3: { key: "hero.p3", value: t("hero.p3") },
-};
-
-const projects = [
-  {
-    nameKey: "projects.item_1.name",
-    descriptionKey: "projects.item_1.description",
-    name: t("projects.item_1.name"),
-    description: t("projects.item_1.description"),
-    link: t("projects.item_1.link"),
-  },
-  {
-    nameKey: "projects.item_2.name",
-    descriptionKey: "projects.item_2.description",
-    name: t("projects.item_2.name"),
-    description: t("projects.item_2.description"),
-    link: t("projects.item_2.link"),
-  },
-  {
-    nameKey: "projects.item_3.name",
-    descriptionKey: "projects.item_3.description",
-    name: t("projects.item_3.name"),
-    description: t("projects.item_3.description"),
-    link: t("projects.item_3.link"),
-  },
-  
-];
-
-const projectsProps = {
-  title: { key: "projects.title", value: t("projects.title") },
-  projects,
 };
 
 const experienceData = {
@@ -142,7 +111,6 @@ const experienceData = {
 >
   <main>
     <Hero {...heroProps} />
-    <Projects {...projectsProps} />
     <Experience {...experienceData} />
   </main>
 </Layout>
