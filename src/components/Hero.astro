@@ -2,6 +2,7 @@
 import I18NDebug from "@ariaskit/astro-i18n/I18NDebug.astro";
 import Linkedin from "@lucide/astro/icons/linkedin";
 import Mail from "@lucide/astro/icons/mail";
+import FileText from "@lucide/astro/icons/file-text";
 export type KT = { key: string; value: string };
 
 interface Props {
@@ -15,30 +16,35 @@ interface Props {
 const { name, title, p1, p2, p3 } = Astro.props as Props;
 ---
 
-<section id={name} class="mb-10 mt-50">
-    <div class="mb-4 flex items-center gap-3">
-        <h1 class="font-semibold text-xl">{name}</h1>
-        <a href="https://linkedin.com/in/nishantrs" target="_blank" rel="noopener noreferrer" class="opacity-50 hover:opacity-100 hover:text-green-500 transition-all duration-200" aria-label="LinkedIn">
-            <Linkedin class="h-5 w-5" />
-        </a>
-        <a href="mailto:nishant@rsrivastava.io" class="opacity-50 hover:opacity-100 hover:text-green-500 transition-all duration-200" aria-label="Email">
-            <Mail class="h-5 w-5" />
-        </a>
+<section id={name} class="mb-16 mt-40">
+    <div class="mb-6 flex items-center gap-3">
+        <h1 class="font-semibold text-2xl tracking-tight">{name}</h1>
+        <div class="flex items-center gap-3 text-faint">
+            <a href="https://linkedin.com/in/nishantrs" target="_blank" rel="noopener noreferrer" class="hover:text-accent-green transition-colors duration-200" aria-label="LinkedIn">
+                <Linkedin class="h-[1.15rem] w-[1.15rem]" />
+            </a>
+            <a href="mailto:nishant@rsrivastava.io" class="hover:text-accent-green transition-colors duration-200" aria-label="Email">
+                <Mail class="h-[1.15rem] w-[1.15rem]" />
+            </a>
+            <a href="https://link.rsrivastava.io/resume" target="_blank" rel="noopener noreferrer" class="hover:text-accent-green transition-colors duration-200" aria-label="Resume (PDF)">
+                <FileText class="h-[1.15rem] w-[1.15rem]" />
+            </a>
+        </div>
     </div>
-    <div class="[&_p]:mb-6 leading-7">
+    <div class="[&_p]:mb-5 leading-relaxed">
         <p>
             <I18NDebug key={title.key}>
-                <span class="text-green-500">{title.value} </span>
+                <span class="text-accent-green font-medium">{title.value} </span>
             </I18NDebug>
             <I18NDebug key={p1.key}>
-                <span class="opacity-50">{p1.value}</span>
+                <span class="text-muted">{p1.value}</span>
             </I18NDebug>
         </p>
         <I18NDebug key={p2.key}>
-            <p class="opacity-50">{p2.value}</p>
+            <p class="text-muted">{p2.value}</p>
         </I18NDebug>
         <I18NDebug key={p3.key}>
-            <p class="opacity-50">{p3.value}</p>
+            <p class="text-muted">{p3.value}</p>
         </I18NDebug>
     </div>
 </section>

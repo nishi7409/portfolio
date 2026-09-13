@@ -13,22 +13,7 @@
     "p3": "Always looking for challenging opportunities that have direct impact."
   },
   "projects": {
-    "title": "Projects",
-    "item_1": {
-      "name": "ilook.hot",
-      "description": "Coming soon",
-      "link": "https://github.com/nishi7409/ilook.hot"
-    },
-    "item_2": {
-      "name": "policebody.cam",
-      "description": "Watch police body cam footage from around the world and keep up with the latest news on police accountability.",
-      "link": "https://github.com/nishi7409/policebody.cam"
-    },
-    "item_3": {
-      "name": "wordofthe.day",
-      "description": "New word every day, with definitions, examples, and a fun fact.",
-      "link": "https://github.com/nishi7409/wordofthe.day"
-    }
+    "title": "Projects"
   },
   "experience": {
     "title": "Experience",
@@ -42,7 +27,7 @@
       "period": "2025 — 2026",
       "role": "System Development Engineer 2",
       "company": "Amazon Web Services",
-      "description": "OpenSearch, Redshift, EMR, Glue, Athena, LakeFormation, and <a href='https://github.com/awslabs/LISA/releases/tag/v6.1.0' target='_blank' rel='noopener noreferrer' class='underline hover:text-green-500 transition-all duration-200'>LLM Inference Solution for Amazon Dedicated Cloud (release v6.1.0)</a>."
+      "description": "OpenSearch, Redshift, EMR, Glue, Athena, LakeFormation, and <a href='https://github.com/awslabs/LISA/releases/tag/v6.1.0' target='_blank' rel='noopener noreferrer' class='accent-link underline underline-offset-2'>LLM Inference Solution for Amazon Dedicated Cloud (release v6.1.0)</a>."
     },
     "item_3": {
       "period": "2023 — 2025",

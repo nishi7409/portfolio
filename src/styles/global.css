@@ -32,7 +32,15 @@
 
 .dark {
   --background: oklch(14% 0.012 285);
-  --foreground: oklch(96% 0.01 285);
+  --foreground: oklch(92% 0.01 285);
+
+  /* Refined green accent — calmer emerald that sits well on near-black */
+  --accent-green: oklch(72% 0.15 155);
+  --accent-green-strong: oklch(78% 0.16 155);
+
+  /* Muted text ladder (replaces ad-hoc opacity-50) */
+  --text-muted: oklch(66% 0.015 285);
+  --text-faint: oklch(52% 0.014 285);
 
   --primary: oklch(64% 0.18 270);
   --primary-foreground: oklch(14% 0.01 270);
@@ -71,6 +79,11 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
 
+  --color-accent-green: var(--accent-green);
+  --color-accent-green-strong: var(--accent-green-strong);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -90,9 +103,32 @@
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.006em;
   }
 }
 
+@utility text-muted { color: var(--text-muted); }
+@utility text-faint { color: var(--text-faint); }
+
+/* Section labels: quieter, wider tracking */
+.section-label {
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+/* Accent link underline that grows in on hover */
+.accent-link {
+  color: var(--accent-green);
+  position: relative;
+  transition: color 0.2s ease;
+}
+.accent-link:hover { color: var(--accent-green-strong); }
 
 html {
   scroll-behavior: smooth;
