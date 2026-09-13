@@ -39,8 +39,8 @@
   --accent-green-strong: oklch(78% 0.16 155);
 
   /* Muted text ladder (replaces ad-hoc opacity-50) */
-  --text-muted: oklch(66% 0.015 285);
-  --text-faint: oklch(52% 0.014 285);
+  --text-muted: oklch(80% 0.012 285);
+  --text-faint: oklch(66% 0.014 285);
 
   --primary: oklch(64% 0.18 270);
   --primary-foreground: oklch(14% 0.01 270);
